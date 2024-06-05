@@ -97,6 +97,8 @@ Gets configuration information about a product.
       "id": 1
   }
 ```
+---
+
 # Software Management
 
 ## Install Software
