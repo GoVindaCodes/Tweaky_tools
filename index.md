@@ -1,5 +1,9 @@
 # Tweaky Tool API Documentation
 
+**Postman Collection ID:** f26eb593-be28-4bfe-9ee5-2e040204430d  
+**Exporter ID:** 29864179  
+**Schema:** [Postman v2.1.0](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+
 ## Table of Contents
 - [Authenticate](#Authenticate)
 - [Check version](#version)
