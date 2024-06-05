@@ -25,7 +25,7 @@ Authenticates the user.
 ### Response
 - No response defined
 
-## Check version
+## version
 
 ### Description
 Gets the version information.
@@ -39,7 +39,7 @@ Gets the version information.
 ### Response
 - No response defined
 
-## Check today
+## today
 
 ### Description
 Gets information about today.
