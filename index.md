@@ -36,12 +36,13 @@ Gets the version information.
 - **Headers:**
   - Authorization: 4903927f9a5d0fa8b4d817db1acae454
 
-**Query Parameters**:
 
-| Key        | Value                                                                                                                                                                                                                                         | Disabled |
-|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| hash_key   | 79dbbcc50900fbd02b0ecbfec09adbb9c83b0e788bb1f83076a2c28e0c3e6730                                                                                                                                                                            |          |
-| productid  | eyJpdiI6IkRxbDc4UnlHbEM2S25oL2t1TGJyNmc9PSIsInZhbHVlIjoiMWxoR0RFQ2JsVDVhVndIQjBmekZadz09IiwibWFjIjoiNDQxNjM1ODhmZDdlZDRjYmM4NjQ5ZWQzZjhkOGRkMDI1MGNmNTNlNmMyOGRhYWJjNDkwY2ZjNTFmOTY5NzQwMyIsInRhZyI6IiJ9 | true     |
+**Parameters**:
+
+| Parameter  | Type   | Description                |
+|------------|--------|----------------------------|
+| hash_key   | string | Hash Key (Required)        |
+| productid  | string | Product ID (Required)      |
 
 ### Response
 - No response defined
