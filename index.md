@@ -1,15 +1,15 @@
 # Tweaky Tool API Documentation
 
 ## Table of Contents
-- [Authenticate](#Authenticate)
-- [Check version](#version)
-- [Check today](#today)
-- [License-remaining](#license-remaining)
+- [Authenticate](#authenticate)
+- [Check Version](#version)
+- [Check Today](#today)
+- [License Remaining](#license-remaining)
 - [Products](#products)
-- [Product-config](#product-config)
-- [Install-software](#install-software)
-- [Uninstall-software](#uninstall-software)
-- [Renew-now](#renew-now)
+- [Product Config](#product-config)
+- [Install Software](#install-software)
+- [Uninstall Software](#uninstall-software)
+- [Renew Now](#renew-now)
 
 ## Authenticate
 
@@ -45,7 +45,7 @@
 |------------|--------|----------------------------|
 | hash_key   | string | Hash Key (Required)        |
 
-## Product Config
+## Products
 
 ### Request
 
@@ -57,68 +57,44 @@
 ### Request
 
 - Method: GET
-- URL: [{{live_registermart}}/api/product-config?id=eyJpdiI6Ik1JYnpXSHZTNmVHYkczTER2YVpsaVE9PSIsInZhbHVlIjoiaXI0eW03TEU0c3FrM3BFUk9ZTnVmQT09IiwibWFjIjoiMjcyZDA5M2U2OGIxNWFjNTQzMDNjMTA1NGQyMDExYjBmMzBjYzgyYjZjMTU3ZDBjNzlkYzg4YTE0ZTRiMWE5YSIsInRhZyI6IiJ9](null)
+- URL: [https://registersmart.io/api/product-config?id=eyJpdiI6Ik1JYnpXSHZTNmVHYkczTER2YVpsaVE9PSIsInZhbHVlIjoiaXI0eW03TEU0c3FrM3BFUk9ZTnVmQT09IiwibWFjIjoiMjcyZDA5M2U2OGIxNWFjNTQzMDNjMTA1NGQyMDExYjBmMzBjYzgyYjZjMTU3ZDBjNzlkYzg4YTE0ZTRiMWE5YSIsInRhZyI6IiJ9](https://registersmart.io/api/product-config?id=eyJpdiI6Ik1JYnpXSHZTNmVHYkczTER2YVpsaVE9PSIsInZhbHVlIjoiaXI0eW03TEU0c3FrM3BFUk9ZTnVmQT09IiwibWFjIjoiMjcyZDA5M2U2OGIxNWFjNTQzMDNjMTA1NGQyMDExYjBmMzBjYzgyYjZjMTU3ZDBjNzlkYzg4YTE0ZTRiMWE5YSIsInRhZyI6IiJ9)
+
+**Parameters**:
+
+| Parameter  | Type   | Description                |
+|------------|--------|----------------------------|
+| id         | string | Config ID (Required)       |
 
 ## Version
 
 ### Request
 
 - Method: GET
-- URL: [{{live_registermart}}/api/version?productid=eyJpdiI6IkRxbDc4UnlHbEM2S25oL2t1TGJyNmc9PSIsInZhbHVlIjoiMWxoR0RFQ2JsVDVhVndIQjBmekZadz09IiwibWFjIjoiNDQxNjM1ODhmZDdlZDRjYmM4NjQ5ZWQzZjhkOGRkMDI1MGNmNTNlNmMyOGRhYWJjNDkwY2ZjNTFmOTY5NzQwMyIsInRhZyI6IiJ9](null)
+- URL: [https://registersmart.io/api/version?productid=eyJpdiI6IkRxbDc4UnlHbEM2S25oL2t1TGJyNmc9PSIsInZhbHVlIjoiMWxoR0RFQ2JsVDVhVndIQjBmekZadz09IiwibWFjIjoiNDQxNjM1ODhmZDdlZDRjYmM4NjQ5ZWQzZjhkOGRkMDI1MGNmNTNlNmMyOGRhYWJjNDkwY2ZjNTFmOTY5NzQwMyIsInRhZyI6IiJ9](https://registersmart.io/api/version?productid=eyJpdiI6IkRxbDc4UnlHbEM2S25oL2t1TGJyNmc9PSIsInZhbHVlIjoiMWxoR0RFQ2JsVDVhVndIQjBmekZadz09IiwibWFjIjoiNDQxNjM1ODhmZDdlZDRjYmM4NjQ5ZWQzZjhkOGRkMDI1MGNmNTNlNmMyOGRhYWJjNDkwY2ZjNTFmOTY5NzQwMyIsInRhZyI6IiJ9)
 
 **Parameters**:
 
 | Parameter  | Type   | Description                |
 |------------|--------|----------------------------|
 | productid  | string | Product ID (Required)      |
-## today
 
-### Description
-Gets information about today.
+## Install Software
 
 ### Request
-- **Method:** GET
-- **URL:** [https://www.tweakytools.com/api/today](https://www.tweakytools.com/api/today)
-- **Headers:**
-  - Authorization: 4903927f9a5d0fa8b4d817db1acae454
 
-### Response
-- No response defined
+- Method: GET/POST/PUT/DELETE
+- URL: [URL of the endpoint]
 
-## License-remaining
-
-### Description
-Gets information about the remaining license.
+## Uninstall Software
 
 ### Request
-- **Method:** GET
-- **URL:** [https://www.tweakytools.com/api/license-remaining?hash_key=6e22fcce66c0968cd81a424fa3083873e83964c12ebb78e89a78ed4b8c0d9082](https://www.tweakytools.com/api/license-remaining?hash_key=6e22fcce66c0968cd81a424fa3083873e83964c12ebb78e89a78ed4b8c0d9082)
 
-### Response
-- No response defined
+- Method: GET/POST/PUT/DELETE
+- URL: [URL of the endpoint]
 
-## Products
-
-### Description
-Gets information about products.
+## Renew Now
 
 ### Request
-- **Method:** GET
-- **URL:** [https://www.tweakytools.com/api/products](https://www.tweakytools.com/api/products)
 
-### Response
-- No response defined
-
-## Product-config
-
-### Description
-Gets configuration information about a product.
-
-### Request
-- **Method:** GET
-- **URL:** [{{live_registermart}}/api/product-config?id=eyJpdiI6Ik1JYnpXSHZTNmVHYkczTER2YVpsaVE9PSIsInZhbHVlIjoiaXI0eW03TEU0c3FrM3BFUk9ZTnVmQT09IiwibWFjIjoiMjcyZDA5M2U2OGIxNWFjNTQzMDNjMTA1NGQyMDExYjBmMzBjYzgyYjZjMTU3ZDBjNzlkYzg4YTE0ZTRiMWE5YSIsInRhZyI6IiJ9](https://registersmart.io/api/product-config?id=eyJpdiI6Ik1JYnpXSHZTNmVHYkczTER2YVpsaVE9PSIsInZhbHVlIjoiaXI0eW03TEU0c3FrM3BFUk9ZTnVmQT09IiwibWFjIjoiMjcyZDA5M2U2OGIxNWFjNTQzMDNjMTA1NGQyMDExYjBmMzBjYzgyYjZjMTU3ZDBjNzlkYzg4YTE0ZTRiMWE5YSIsInRhZyI6IiJ9)
-- **Headers:**
-  - Authorization: 4903927f9a5d0fa8b4d817db1acae454
-
-### Response
-- No response defined
+- Method: GET/POST/PUT/DELETE
+- URL: [URL of the endpoint]
