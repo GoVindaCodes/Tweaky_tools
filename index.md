@@ -3,7 +3,7 @@
 ## Table of Contents
 - [Authenticate](#Authenticate)
 - [Check version](#version)
-- [Today](#today)
+- [Check today](#today)
 - [License-remaining](#license-remaining)
 - [Products](#products)
 - [Product-config](#product-config)
