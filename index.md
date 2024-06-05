@@ -93,10 +93,10 @@
 
 **Auth**:
 
-| Key   | Value | Type    |
-|-------|-------|---------|
-| value |       | string  |
-| key   |       | string  |
+| Key   |  Type    |
+|-------|----------|
+| value |  string  |
+| key   |  string  |
 
 ## Uninstall Software
 
