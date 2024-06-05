@@ -92,8 +92,6 @@ Gets configuration information about a product.
 - **Headers:**
   - Authorization: 4903927f9a5d0fa8b4d817db1acae454
 - **Body:**
-  ```json
   {
       "id": 1
   }
----
