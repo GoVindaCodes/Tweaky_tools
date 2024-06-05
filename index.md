@@ -63,49 +63,4 @@
 |------------|--------|----------------------------|
 | id         | string | Config ID (Required)       |
 
-## Version
 
-### Request
-
-- Method: GET
-- URL: [https://{variable}/api/version?productid=eyJpdiI6IkRxbDc4UnlHbEM2S25oL2t1TGJyNmc9PSIsInZhbHVlIjoiMWxoR0RFQ2JsVDVhVndIQjBmekZadz09IiwibWFjIjoiNDQxNjM1ODhmZDdlZDRjYmM4NjQ5ZWQzZjhkOGRkMDI1MGNmNTNlNmMyOGRhYWJjNDkwY2ZjNTFmOTY5NzQwMyIsInRhZyI6IiJ9](https://registersmart.io/api/version?productid=eyJpdiI6IkRxbDc4UnlHbEM2S25oL2t1TGJyNmc9PSIsInZhbHVlIjoiMWxoR0RFQ2JsVDVhVndIQjBmekZadz09IiwibWFjIjoiNDQxNjM1ODhmZDdlZDRjYmM4NjQ5ZWQzZjhkOGRkMDI1MGNmNTNlNmMyOGRhYWJjNDkwY2ZjNTFmOTY5NzQwMyIsInRhZyI6IiJ9)
-**Parameters**:
-
-| Parameter  | Type   | Description                |
-|------------|--------|----------------------------|
-| productid  | string | Product ID (Required)      |
-
-## Environment Variables
-
-```json
-{
-	"variable": [
-		{
-			"key": "local_port",
-			"value": "",
-			"type": "string"
-		},
-		{
-			"key": "local",
-			"value": "http://localhost",
-			"type": "string"
-		},
-		{
-			"key": "local_port_netplus",
-			"value": "http://192.168.1.5:5000",
-			"type": "string"
-		},
-		{
-			"key": "live",
-			"value": "https://www.tweakytools.com/",
-			"type": "string"
-		},
-		{
-			"key": "live_registermart",
-			"value": "https://registersmart.io",
-			"type": "string"
-		}
-	]
-}
-```
----
