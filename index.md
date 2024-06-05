@@ -96,3 +96,4 @@ Gets configuration information about a product.
   {
       "id": 1
   }
+---
