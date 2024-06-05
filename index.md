@@ -77,3 +77,38 @@
 | Parameter  | Type   | Description                |
 |------------|--------|----------------------------|
 | productid  | string | Product ID (Required)      |
+
+## Environment Variables
+
+```json
+{
+	"variable": [
+		{
+			"key": "local_port",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "local",
+			"value": "http://localhost",
+			"type": "string"
+		},
+		{
+			"key": "local_port_netplus",
+			"value": "http://192.168.1.5:5000",
+			"type": "string"
+		},
+		{
+			"key": "live",
+			"value": "https://www.tweakytools.com/",
+			"type": "string"
+		},
+		{
+			"key": "live_registermart",
+			"value": "https://registersmart.io",
+			"type": "string"
+		}
+	]
+}
+```
+---
