@@ -55,7 +55,7 @@
 ### Request
 
 - Method: GET
-- URL: [https://www.tweakytools.com/api/products](https://www.tweakytools.com/api/products)
+- URL: [https://www.tweakytools.com/api/product-config](https://www.tweakytools.com/api/product-config)
 
 **Parameters**:
 
