@@ -1,7 +1,7 @@
 # Tweaky Tool API Documentation
 
 ## Table of Contents
-- [Authenticate](#authenticate)
+- [Authenticate Key](#authenticate)
 - [Today](#today)
 - [License Remaining](#license-remaining)
 - [Products](#products)
