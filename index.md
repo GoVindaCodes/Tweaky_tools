@@ -98,5 +98,28 @@ Gets configuration information about a product.
   }
 ```
 
+## Software Management
+
+### Install Software
+
+- **Method:** POST
+- **URL:** [https://www.tweakytools.com/api/install-software](https://www.tweakytools.com/api/install-software)
+- **Headers:** 
+  - Authorization: `4903927f9a5d0fa8b4d817db1acae454`
+
+This endpoint is used to install software via the Tweaky Tool API. Make a POST request to this endpoint with appropriate authorization to install the software.
+
+### Uninstall Software
+
+- **Method:** POST
+- **URL:** [https://www.tweakytools.com/api/uninstall-software](https://www.tweakytools.com/api/uninstall-software)
+- **Headers:** 
+  - Authorization: `4903927f9a5d0fa8b4d817db1acae454`
+
+This endpoint is used to uninstall software via the Tweaky Tool API. Make a POST request to this endpoint with appropriate authorization to uninstall the software.
+
+These endpoints enable managing the installation and uninstallation of software through the Tweaky Tool platform programmatically.
+
+
 
 
