@@ -82,19 +82,58 @@
 
 ### Request
 
-- Method: GET/POST/PUT/DELETE
-- URL: [URL of the endpoint]
+- Method: POST
+- URL: [https://www.tweakytools.com/api/install-software](https://www.tweakytools.com/api/install-software)
+
+**Headers**:
+
+| Key           | Value                              |
+|---------------|------------------------------------|
+| Authorization | 4903927f9a5d0fa8b4d817db1acae454   |
+
+**Auth**:
+
+| Key   | Value | Type    |
+|-------|-------|---------|
+| value |       | string  |
+| key   |       | string  |
 
 ## Uninstall Software
 
 ### Request
 
-- Method: GET/POST/PUT/DELETE
-- URL: [URL of the endpoint]
+- Method: POST
+- URL: [https://www.tweakytools.com/api/uninstall-software](https://www.tweakytools.com/api/uninstall-software)
+
+**Headers**:
+
+| Key           | Value                              |
+|---------------|------------------------------------|
+| Authorization | 4903927f9a5d0fa8b4d817db1acae454   |
+
+**Auth**:
+
+| Key   | Value | Type    |
+|-------|-------|---------|
+| value |       | string  |
+| key   |       | string  |
 
 ## Renew Now
 
 ### Request
 
-- Method: GET/POST/PUT/DELETE
-- URL: [URL of the endpoint]
+- Method: POST
+- URL: [https://www.tweakytools.com/api/renew-now](https://www.tweakytools.com/api/renew-now)
+
+**Headers**:
+
+| Key           | Value                              |
+|---------------|------------------------------------|
+| Authorization | 4903927f9a5d0fa8b4d817db1acae454   |
+
+**Auth**:
+
+| Key   | Value | Type    |
+|-------|-------|---------|
+| value |       | string  |
+| key   |       | string  |
