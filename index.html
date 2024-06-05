@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+        <style>
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #606c71;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.container1 {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #159957;
+    background-image: linear-gradient(120deg, #155799, #159957);
+}
+
+h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    color: #159957;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #1e6bb8;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.3rem;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    padding: 10px;
+}
+
+    </style>
+    <title>Triton</title>
+</head>
+<body>
+    <div class="container">
+    <div class="container1">
+    <h1>Triton API Documentation</h1>
+    <div>
+        <p>Welcome to the Triton API documentation. Below you'll find information on various API endpoints and their usage.</p>
+    </div>
+<a class="btn" href="https://github.com/techxps/Triton" target="_blank" style="text-decoration: none;">View on GitHub</a>
+</div>
+<div class="container2">
+<h2 class="code-line" data-line-start=0 data-line-end=1 ><a id="Table_of_Contents_0"></a>Table of Contents</h2>
+<ol>
+<li class="has-line-data" data-line-start="1" data-line-end="2"><a href="#API_Authentication_13">API Authentication</a></li>
+<li class="has-line-data" data-line-start="2" data-line-end="5"><a href="#User_Management_31">User Management</a>
+<ul>
+<li class="has-line-data" data-line-start="3" data-line-end="4"><a href="#Check_Users_API_33">Check Users API</a></li>
+<li class="has-line-data" data-line-start="4" data-line-end="5"><a href="#Forgot_Password_49">Forgot Password</a></li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="5" data-line-end="9"><a href="#user-management">Hospital Management</a>
+<ul>
+<li class="has-line-data" data-line-start="6" data-line-end="7"><a href="#Get_All_Departments_65">Get All Departments</a></li>
+<li class="has-line-data" data-line-start="7" data-line-end="8"><a href="#Get_Wards_By_Department_82">Get Wards By Department</a></li>
+<li class="has-line-data" data-line-start="8" data-line-end="9"><a href="#Get_Designations_By_Hospital_103">Get Designations By Hospital</a></li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="9" data-line-end="13"><a href="#shift-management">Shift Management</a>
+<ul>
+<li class="has-line-data" data-line-start="10" data-line-end="11"><a href="#Offduties__Duty_Roster_229">Off-duties / Duty Roster</a></li>
+<li class="has-line-data" data-line-start="11" data-line-end="13"><a href="#Clockin_266">Clock-in</a></li>
+</ul>
+</li>
+</ol>
+<h2 class="code-line" data-line-start=13 data-line-end=14 ><a id="API_Authentication_13" ></a>API Authentication</h2>
+<h3 class="code-line" data-line-start=15 data-line-end=16 ><a id="Authorization_Token_15"></a>Authorization Token</h3>
+<p class="has-line-data" data-line-start="17" data-line-end="18"><strong>Endpoint</strong>: <code>POST /api/Account/AuthorizationToken</code></p>
+<p class="has-line-data" data-line-start="19" data-line-end="20"><strong>URL</strong>: <code>https://tritonlenmedapi.converge-solutions.com/api/Account/AuthorizationToken</code></p>
+<p class="has-line-data" data-line-start="21" data-line-end="22"><strong>Parameters</strong>:</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UserName</td>
+<td>string</td>
+<td>EmailId/Username (Required)</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>string</td>
+<td>Password (Required)</td>
+</tr>
+<tr>
+<td>HospitalId</td>
+<td>int</td>
+<td>Unique Id (Required)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="code-line" data-line-start=31 data-line-end=32 ><a id="User_Management_31"></a>User Management</h2>
+<h3 class="code-line" data-line-start=33 data-line-end=34 ><a id="Check_Users_API_33"></a>Check Users API</h3>
+<p class="has-line-data" data-line-start="35" data-line-end="36"><strong>Endpoint</strong>: <code>POST /api/Account/admincheckuser</code></p>
+<p class="has-line-data" data-line-start="37" data-line-end="38"><strong>URL</strong>: <code>https://tritonlenmedapi.converge-solutions.com/api/Account/admincheckuser</code></p>
+<p class="has-line-data" data-line-start="39" data-line-end="40"><strong>Parameters</strong>:</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UserName</td>
+<td>string</td>
+<td>Email Id/Username (Required)</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>string</td>
+<td>Password (Required)</td>
+</tr>
+<tr>
+<td>HospitalId</td>
+<td>int</td>
+<td>Unique Id (Required)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 class="code-line" data-line-start=49 data-line-end=50 ><a id="Forgot_Password_49"></a>Forgot Password</h3>
+<p class="has-line-data" data-line-start="51" data-line-end="52"><strong>Endpoint</strong>: <code>POST /api/Account/ForgotPassword</code></p>
+<p class="has-line-data" data-line-start="53" data-line-end="54"><strong>URL</strong>: <code>https://tritonlenmedapi.converge-solutions.com/api/Account/ForgotPassword</code></p>
+<p class="has-line-data" data-line-start="55" data-line-end="56"><strong>Parameters</strong>:</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Email</td>
+<td>string</td>
+<td>Email Id/Username (Required)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="code-line" data-line-start=64 data-line-end=65 ><a id="Check_Users_API_64"></a>Check Users API</h2>
+<h2 class="code-line" data-line-start=65 data-line-end=66 ><a id="Get_All_Departments_65"></a>Get All Departments</h2>
+<p class="has-line-data" data-line-start="67" data-line-end="68">To retrieve all departments related to a particular hospital, make a POST request to the following API endpoint:</p>
+<p class="has-line-data" data-line-start="69" data-line-end="71"><strong>API Method</strong>: <code>POST</code><br>
+<strong>URL</strong>: <code>baseurl/api/Admin/GetAllDepartments</code></p>
+<h3 class="code-line" data-line-start=72 data-line-end=73 ><a id="Parameters_72"></a>Parameters:</h3>
+<ul>
+<li class="has-line-data" data-line-start="74" data-line-end="78"><strong>HospitalId</strong>: Required
+<ul>
+<li class="has-line-data" data-line-start="75" data-line-end="76">Type: Integer</li>
+<li class="has-line-data" data-line-start="76" data-line-end="78">Description: Unique identifier for the hospital.</li>
+</ul>
+</li>
+</ul>
+<p class="has-line-data" data-line-start="78" data-line-end="79">You can obtain the hospital ID by using the hospital API.</p>
+<hr>
+<h2 class="code-line" data-line-start=82 data-line-end=83 ><a id="Get_Wards_By_Department_82"></a>Get Wards By Department</h2>
+<p class="has-line-data" data-line-start="84" data-line-end="85">To get all the wards related to a particular department and hospital, use the following API endpoint:</p>
+<p class="has-line-data" data-line-start="86" data-line-end="88"><strong>API Method</strong>: <code>POST</code><br>
+<strong>URL</strong>: <code>baseurl/api/Admin/GetWardsByDepartment</code></p>
+<h3 class="code-line" data-line-start=89 data-line-end=90 ><a id="Parameters_89"></a>Parameters:</h3>
+<ol>
+<li class="has-line-data" data-line-start="91" data-line-end="95">
+<p class="has-line-data" data-line-start="91" data-line-end="92"><strong>HospitalId</strong>: Required</p>
+<ul>
+<li class="has-line-data" data-line-start="92" data-line-end="93">Data Type: Integer</li>
+<li class="has-line-data" data-line-start="93" data-line-end="95">Description: Unique identifier for the hospital.</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="95" data-line-end="99">
+<p class="has-line-data" data-line-start="95" data-line-end="96"><strong>DepartmentId</strong>: Required</p>
+<ul>
+<li class="has-line-data" data-line-start="96" data-line-end="97">Data Type: Integer</li>
+<li class="has-line-data" data-line-start="97" data-line-end="99">Description: Unique identifier for the department.</li>
+</ul>
+</li>
+</ol>
+<p class="has-line-data" data-line-start="99" data-line-end="100">You can obtain the hospital ID and department ID by using the relevant APIs.</p>
+<hr>
+<h2 class="code-line" data-line-start=103 data-line-end=104 ><a id="Get_Designations_By_Hospital_103"></a>Get Designations By Hospital</h2>
+<p class="has-line-data" data-line-start="105" data-line-end="106">To retrieve all designations related to a particular hospital, make a POST request to the following API endpoint:</p>
+<p class="has-line-data" data-line-start="107" data-line-end="109"><strong>API Method</strong>: <code>POST</code><br>
+<strong>URL</strong>: <code>baseurl/api/Admin/GetDesignationByHospital</code></p>
+<h3 class="code-line" data-line-start=110 data-line-end=111 ><a id="Parameters_110"></a>Parameters:</h3>
+<ul>
+<li class="has-line-data" data-line-start="112" data-line-end="115"><strong>HospitalId</strong>: Required
+<ul>
+<li class="has-line-data" data-line-start="113" data-line-end="114">Data Type: Integer</li>
+<li class="has-line-data" data-line-start="114" data-line-end="115">Description: Unique identifier for the hospital.</li>
+</ul>
+</li>
+</ul>
+<h3 class="code-line" data-line-start=118 data-line-end=119 ><a id="JML_Leaving_Process_118"></a>JML Leaving Process</h3>
+<h4 class="code-line" data-line-start=120 data-line-end=121 ><a id="Joining_120"></a>Joining</h4>
+<p class="has-line-data" data-line-start="122" data-line-end="123">When a nurse joins your organization and their details are captured in your HR system, you can follow this process to create the nurse automatically in Triton.</p>
+<ul>
+<li class="has-line-data" data-line-start="124" data-line-end="126"><strong>API Url</strong>: <code>POST api/Admin/CreateUser</code></li>
+</ul>
+<p class="has-line-data" data-line-start="126" data-line-end="127"><strong>Parameters</strong>:</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UserName</td>
+<td>Required, Data Type: String</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>Required, Data Type: Password</td>
+</tr>
+<tr>
+<td>RoleId</td>
+<td>Required, Data Type: Integer (4 for general user/nurse)</td>
+</tr>
+<tr>
+<td>HospitalId</td>
+<td>Required, Data Type: Integer</td>
+</tr>
+<tr>
+<td>EmailId</td>
+<td>Required, Data Type: Email Id</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="code-line" data-line-start=139 data-line-end=140 ><a id="Request_Formats_139"></a>Request Formats</h2>
+<h3 class="code-line" data-line-start=141 data-line-end=142 ><a id="Sample_141"></a>Sample:</h3>
+<pre><code class="has-line-data" data-line-start="144" data-line-end="165" class="language-json">{
+  "<span class="hljs-attribute">CreatedBy</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">Password</span>": <span class="hljs-value"><span class="hljs-string">"sample string 1"</span></span>,
+  "<span class="hljs-attribute">qualification</span>": <span class="hljs-value"><span class="hljs-string">"sample string 3"</span></span>,
+  "<span class="hljs-attribute">Image</span>": <span class="hljs-value"><span class="hljs-string">"sample string 5"</span></span>,
+  "<span class="hljs-attribute">UserName</span>": <span class="hljs-value"><span class="hljs-string">"sample string 6"</span></span>,
+  "<span class="hljs-attribute">Name</span>": <span class="hljs-value"><span class="hljs-string">"sample string 7"</span></span>,
+  "<span class="hljs-attribute">LastName</span>": <span class="hljs-value"><span class="hljs-string">"sample string 8"</span></span>,
+  "<span class="hljs-attribute">Email</span>": <span class="hljs-value"><span class="hljs-string">"sample string 9"</span></span>,
+  "<span class="hljs-attribute">Address</span>": <span class="hljs-value"><span class="hljs-string">"sample string 10"</span></span>,
+  "<span class="hljs-attribute">EmployeeNumber</span>": <span class="hljs-value"><span class="hljs-string">"sample string 11"</span></span>,
+  "<span class="hljs-attribute">Country</span>": <span class="hljs-value"><span class="hljs-string">"sample string 12"</span></span>,
+  "<span class="hljs-attribute">Mobile</span>": <span class="hljs-value"><span class="hljs-string">"sample string 13"</span></span>,
+  "<span class="hljs-attribute">RoleId</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+  "<span class="hljs-attribute">DepartmentId</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">HospitalId</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">DesignationId</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">ReportTo</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">WardId</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+</span>}
+</code></pre>
+<hr>
+<h3 class="code-line" data-line-start=166 data-line-end=167 ><a id="Update_Plan_166"></a>Update Plan</h3>
+<p class="has-line-data" data-line-start="168" data-line-end="169"><strong>Endpoint</strong>: <code>PUT /api/Plan/UpdatePlan</code></p>
+<p class="has-line-data" data-line-start="170" data-line-end="171"><strong>URL</strong>: <code>https://tritonlenmedapi.converge-solutions.com/api/Plan/UpdatePlan</code></p>
+<p class="has-line-data" data-line-start="172" data-line-end="173"><strong>Parameters</strong>:</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PlanningId</td>
+<td>int</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>PlanningHistoryId</td>
+<td>int</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>ModifiedBy</td>
+<td>int</td>
+<td>UserId of modified User (Required)</td>
+</tr>
+<tr>
+<td>DepartmentId</td>
+<td>int</td>
+<td>Unique Id</td>
+</tr>
+<tr>
+<td>WardId</td>
+<td>int</td>
+<td>Unique Id</td>
+</tr>
+<tr>
+<td>TotalBeds</td>
+<td>int</td>
+<td>Number</td>
+</tr>
+<tr>
+<td>StandardAcquity</td>
+<td>int</td>
+<td>Number</td>
+</tr>
+<tr>
+<td>RegisteredNurse</td>
+<td>int</td>
+<td>Number</td>
+</tr>
+<tr>
+<td>EnrolledNurse</td>
+<td>int</td>
+<td>Number</td>
+</tr>
+<tr>
+<td>EnrolledNurseAuxillary</td>
+<td>int</td>
+<td>Number</td>
+</tr>
+<tr>
+<td>DependencyCategory1</td>
+<td>int</td>
+<td>Number</td>
+</tr>
+<tr>
+<td>DependencyCategory2</td>
+<td>int</td>
+<td>Number</td>
+</tr>
+<tr>
+<td>DependencyCategory3</td>
+<td>int</td>
+<td>Number</td>
+</tr>
+<tr>
+<td>DependencyCategory4</td>
+<td>int</td>
+<td>Number</td>
+</tr>
+<tr>
+<td>DayShift</td>
+<td>int</td>
+<td>Number</td>
+</tr>
+<tr>
+<td>NightShift</td>
+<td>int</td>
+<td>Number</td>
+</tr>
+<tr>
+<td>TargetCostPerDay</td>
+<td>string</td>
+<td>String</td>
+</tr>
+<tr>
+<td>PlanForDate</td>
+<td>DateTime</td>
+<td>Specify date for the particular plan</td>
+</tr>
+<tr>
+<td>IsRoundUpDown</td>
+<td>bool</td>
+<td>Optional</td>
+</tr>
+<tr>
+<td>RoundUp</td>
+<td>decimal</td>
+<td>Decimal Number</td>
+</tr>
+<tr>
+<td>RoundDown</td>
+<td>decimal</td>
+<td>Decimal Number</td>
+</tr>
+<tr>
+<td>MinimumSuggestedStaff</td>
+<td>int</td>
+<td>Integer</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 class="code-line" data-line-start=201 data-line-end=202 ><a id="Request_Formats_201"></a>Request Formats</h2>
+<h3 class="code-line" data-line-start=203 data-line-end=204 ><a id="Sample_203"></a>Sample:</h3>
+<pre><code class="has-line-data" data-line-start="206" data-line-end="228" class="language-json">{
+  "<span class="hljs-attribute">CreatedBy</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">Password</span>": <span class="hljs-value"><span class="hljs-string">"sample string 1"</span></span>,
+  "<span class="hljs-attribute">qualification</span>": <span class="hljs-value"><span class="hljs-string">"sample string 3"</span></span>,
+  "<span class="hljs-attribute">Image</span>": <span class="hljs-value"><span class="hljs-string">"sample string 5"</span></span>,
+  "<span class="hljs-attribute">UserName</span>": <span class="hljs-value"><span class="hljs-string">"sample string 6"</span></span>,
+  "<span class="hljs-attribute">Name</span>": <span class="hljs-value"><span class="hljs-string">"sample string 7"</span></span>,
+  "<span class="hljs-attribute">LastName</span>": <span class="hljs-value"><span class="hljs-string">"sample string 8"</span></span>,
+  "<span class="hljs-attribute">Email</span>": <span class="hljs-value"><span class="hljs-string">"sample string 9"</span></span>,
+  "<span class="hljs-attribute">Address</span>": <span class="hljs-value"><span class="hljs-string">"sample string 10"</span></span>,
+  "<span class="hljs-attribute">EmployeeNumber</span>": <span class="hljs-value"><span class="hljs-string">"sample string 11"</span></span>,
+  "<span class="hljs-attribute">Country</span>": <span class="hljs-value"><span class="hljs-string">"sample string 12"</span></span>,
+  "<span class="hljs-attribute">Mobile</span>": <span class="hljs-value"><span class="hljs-string">"sample string 13"</span></span>,
+  "<span class="hljs-attribute">RoleId</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+  "<span class="hljs-attribute">DepartmentId</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">HospitalId</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">DesignationId</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">ReportTo</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">WardId</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+</span>}
+
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=229 data-line-end=230 ><a id="Offduties__Duty_Roster_229"></a>Off-duties / Duty Roster</h2>
+<p class="has-line-data" data-line-start="231" data-line-end="232">To manage off-duties or duty roster, you need to call the following API with the requested parameters:</p>
+<p class="has-line-data" data-line-start="233" data-line-end="234"><strong>API Endpoint</strong>: <code>POST api/Roaster/CreateNurseShift</code></p>
+<h3 class="code-line" data-line-start=235 data-line-end=236 ><a id="Parameters_235"></a>Parameters:</h3>
+<ol>
+<li class="has-line-data" data-line-start="237" data-line-end="238"><strong>EmployeeNumber</strong>: Required</li>
+<li class="has-line-data" data-line-start="238" data-line-end="239"><strong>DepartmentId</strong>: Required (Data Type: Integer)</li>
+<li class="has-line-data" data-line-start="239" data-line-end="240"><strong>ShiftMasterId</strong>: Required (Data Type: Integer)</li>
+<li class="has-line-data" data-line-start="240" data-line-end="241"><strong>ShiftDate</strong>: Required (DateTime Format: mm/dd/yyyy)</li>
+<li class="has-line-data" data-line-start="241" data-line-end="243"><strong>CreatedBy</strong>: Required (Value: 1 for admin HR system)</li>
+</ol>
+<p class="has-line-data" data-line-start="243" data-line-end="244">To get the <code>ShiftMasterId</code>, use the following enum class:</p>
+<ul>
+<li class="has-line-data" data-line-start="245" data-line-end="247">For “Day” shift, use 1.</li>
+</ul>
+<h3 class="code-line" data-line-start=247 data-line-end=248 ><a id="Sample_Request_247"></a>Sample Request:</h3>
+<pre><code class="has-line-data" data-line-start="250" data-line-end="265" class="language-json">[
+  {
+    "<span class="hljs-attribute">$id</span>": <span class="hljs-value"><span class="hljs-string">"1"</span></span>,
+    "<span class="hljs-attribute">UserId</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+    "<span class="hljs-attribute">DepartmentId</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
+    "<span class="hljs-attribute">ShiftMasterId</span>": <span class="hljs-value"><span class="hljs-number">3</span></span>,
+    "<span class="hljs-attribute">ShiftDate</span>": <span class="hljs-value"><span class="hljs-string">"2024-05-26T09:55:48.0096806+00:00"</span></span>,
+    "<span class="hljs-attribute">CreatedBy</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+    "<span class="hljs-attribute">ShiftId</span>": <span class="hljs-value"><span class="hljs-string">"sample string 5"</span>
+  </span>},
+  {
+    "<span class="hljs-attribute">$ref</span>": <span class="hljs-value"><span class="hljs-string">"1"</span>
+  </span>}
+]
+</code></pre>
+<hr>
+<h2 class="code-line" data-line-start=266 data-line-end=267 ><a id="Clockin_266"></a>Clock-in</h2>
+<p class="has-line-data" data-line-start="268" data-line-end="269">When a staff member physically clocks in on-site, you can push that information to the Surveillance environment on Triton using the Clock-in API. This allows you to populate the existing column for clock-in data and enables reporting from Triton as a single source. Reporting can still be combined without integration by including two reporting sources – one for planning (Triton) and one for actuals (your clock-in system).</p>
+<h3 class="code-line" data-line-start=270 data-line-end=271 ><a id="API_Endpoint_270"></a>API Endpoint</h3>
+<p class="has-line-data" data-line-start="272" data-line-end="273"><strong>API Url</strong>: <code>POST api/Roaster/ClockIn</code></p>
+<h3 class="code-line" data-line-start=274 data-line-end=275 ><a id="Parameters_274"></a>Parameters</h3>
+<ol>
+<li class="has-line-data" data-line-start="276" data-line-end="277"><strong>EmployeeNumber</strong>: Required</li>
+<li class="has-line-data" data-line-start="277" data-line-end="278"><strong>DepartmentId</strong>: Required (Data Type: Integer)</li>
+<li class="has-line-data" data-line-start="278" data-line-end="280"><strong>ClockInDate</strong>: Required (DateTime Format: dd/mm/yyyy)</li>
+</ol>
+<p class="has-line-data" data-line-start="280" data-line-end="281">Request the following information regarding an employee’s punch-in activity in your offline system:</p>
+<ul>
+<li class="has-line-data" data-line-start="281" data-line-end="282">Employee Number: [Insert Employee Number]</li>
+<li class="has-line-data" data-line-start="282" data-line-end="283">Department: [Insert Department]</li>
+<li class="has-line-data" data-line-start="283" data-line-end="285">Date of Punch-In: [Insert Date]<br>
+–&gt;</li>
+</ul>
+</div>
+</div>
+</body>
+</html>
