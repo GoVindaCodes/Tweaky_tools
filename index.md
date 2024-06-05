@@ -2,8 +2,8 @@
 
 ## Table of Contents
 - [Authenticate](#Authenticate)
-- [Check version](#Check version)
-- [Check today](#Check today)
+- [Check version](#version)
+- [Check today](#today)
 - [License-remaining](#license-remaining)
 - [Products](#products)
 - [Product-config](#product-config)
