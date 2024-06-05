@@ -7,9 +7,7 @@
 - [License Remaining](#license-remaining)
 - [Products](#products)
 - [Product Config](#product-config)
-- [Install Software](#install-software)
-- [Uninstall Software](#uninstall-software)
-- [Renew Now](#renew-now)
+
 
 ## Authenticate
 
