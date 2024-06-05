@@ -11,7 +11,7 @@
 - [Uninstall-software](#uninstall-software)
 - [Renew-now](#renew-now)
 
-## authenticate
+## Authenticate
 
 ### Description
 Authenticates the user.
@@ -25,7 +25,7 @@ Authenticates the user.
 ### Response
 - No response defined
 
-## version
+## Check version
 
 ### Description
 Gets the version information.
@@ -39,7 +39,7 @@ Gets the version information.
 ### Response
 - No response defined
 
-## today
+## Check today
 
 ### Description
 Gets information about today.
@@ -53,7 +53,7 @@ Gets information about today.
 ### Response
 - No response defined
 
-## license-remaining
+## License-remaining
 
 ### Description
 Gets information about the remaining license.
@@ -67,7 +67,7 @@ Gets information about the remaining license.
 ### Response
 - No response defined
 
-## products
+## Products
 
 ### Description
 Gets information about products.
@@ -81,7 +81,7 @@ Gets information about products.
 ### Response
 - No response defined
 
-## product-config
+## Product-config
 
 ### Description
 Gets configuration information about a product.
