@@ -55,7 +55,7 @@
 ### Request
 
 - Method: GET
-- URL: [https://{variable}/api/product-config?id=eyJpdiI6Ik1JYnpXSHZTNmVHYkczTER2YVpsaVE9PSIsInZhbHVlIjoiaXI0eW03TEU0c3FrM3BFUk9ZTnVmQT09IiwibWFjIjoiMjcyZDA5M2U2OGIxNWFjNTQzMDNjMTA1NGQyMDExYjBmMzBjYzgyYjZjMTU3ZDBjNzlkYzg4YTE0ZTRiMWE5YSIsInRhZyI6IiJ9](https://registersmart.io/api/product-config?id=eyJpdiI6Ik1JYnpXSHZTNmVHYkczTER2YVpsaVE9PSIsInZhbHVlIjoiaXI0eW03TEU0c3FrM3BFUk9ZTnVmQT09IiwibWFjIjoiMjcyZDA5M2U2OGIxNWFjNTQzMDNjMTA1NGQyMDExYjBmMzBjYzgyYjZjMTU3ZDBjNzlkYzg4YTE0ZTRiMWE5YSIsInRhZyI6IiJ9)
+- URL: [https://www.tweakytools.com/api/products](https://www.tweakytools.com/api/products)
 
 **Parameters**:
 
