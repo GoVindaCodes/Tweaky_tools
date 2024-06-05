@@ -97,29 +97,47 @@ Gets configuration information about a product.
       "id": 1
   }
 ```
+# Software Management
 
-## Software Management
+## Install Software
 
-### Install Software
+### Description
+Installs software via the Tweaky Tool API.
 
+### Request
 - **Method:** POST
-- **URL:** [https://www.tweakytools.com/api/install-software](https://www.tweakytools.com/api/install-software)
-- **Headers:** 
-  - Authorization: `4903927f9a5d0fa8b4d817db1acae454`
+- **URL:** https://www.tweakytools.com/api/install-software
+- **Headers:**
+  - Authorization: 4903927f9a5d0fa8b4d817db1acae454
 
-This endpoint is used to install software via the Tweaky Tool API. Make a POST request to this endpoint with appropriate authorization to install the software.
+### Response
+- No response defined
 
-### Uninstall Software
+## Uninstall Software
 
+### Description
+Uninstalls software via the Tweaky Tool API.
+
+### Request
 - **Method:** POST
-- **URL:** [https://www.tweakytools.com/api/uninstall-software](https://www.tweakytools.com/api/uninstall-software)
-- **Headers:** 
-  - Authorization: `4903927f9a5d0fa8b4d817db1acae454`
+- **URL:** https://www.tweakytools.com/api/uninstall-software
+- **Headers:**
+  - Authorization: 4903927f9a5d0fa8b4d817db1acae454
 
-This endpoint is used to uninstall software via the Tweaky Tool API. Make a POST request to this endpoint with appropriate authorization to uninstall the software.
+### Response
+- No response defined
 
-These endpoints enable managing the installation and uninstallation of software through the Tweaky Tool platform programmatically.
+## Renew Now
 
+### Description
+Renews the software license.
 
+### Request
+- **Method:** POST
+- **URL:** https://www.tweakytools.com/api/renew-now
+- **Headers:**
+  - Authorization: 4903927f9a5d0fa8b4d817db1acae454
 
+### Response
+- No response defined
 
