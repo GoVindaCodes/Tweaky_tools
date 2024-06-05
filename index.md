@@ -2,14 +2,14 @@
 
 ## Table of Contents
 - [Authenticate](#Authenticate)
-- [version](#version)
-- [today](#today)
-- [license-remaining](#license-remaining)
-- [products](#products)
-- [product-config](#product-config)
-- [install-software](#install-software)
-- [uninstall-software](#uninstall-software)
-- [renew-now](#renew-now)
+- [Check version](#version)
+- [Today](#today)
+- [License-remaining](#license-remaining)
+- [Products](#products)
+- [Product-config](#product-config)
+- [Install-software](#install-software)
+- [Uninstall-software](#uninstall-software)
+- [Renew-now](#renew-now)
 
 ## authenticate
 
